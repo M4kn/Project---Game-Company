@@ -1,156 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500&display=swap');
+
+
 /* Reset and base styles */
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-  
-  body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-  }
-  
-  /* Header and Navigation */
-  header {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 15px 30px;
-      position: fixed;
-      width: 100%;
-      z-index: 100;
-  }
-  
-  nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  
-  .logo-container {
-      display: flex;
-      align-items: center;
-  }
-  
-  .logo {
-      height: 40px;
-      margin-right: 10px;
-  }
-  
-  .logo-container h1 {
-      font-size: 1.5rem;
-      color: #fff;
-  }
-  
-  .nav-links {
-      display: flex;
-      list-style: none;
-  }
-  
-  .nav-links li {
-      margin: 0 15px;
-  }
-  
-  .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-      color: #ff3300;
-  }
-  
-  .social-icons {
-      display: flex;
-  }
-  
-  .social-icon {
-      width: 25px;
-      height: 25px;
-      background-color: #666;
-      border-radius: 50%;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  }
-  
-  .social-icon:hover {
-      background-color: #ff3300;
-  }
-  
-  /* Hero Section */
-  .hero {
-      height: 100vh;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-  }
-  
-  .hero-content {
-      z-index: 2;
-  }
-  
-  .hero-logo {
-      margin-bottom: 20px;
-  }
-  
-  .hero-logo img {
-      height: 80px;
-  }
-  
-  .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      font-weight: bold;
-  }
-  
-  .hero h3 {
-      font-size: 1.8rem;
-      font-style: italic;
-      margin-bottom: 10px;
-  }
-  
-  .hero p {
-      font-size: 1.2rem;
-      font-style: italic;
-  }
-  
-  /* Footer */
-  footer {
-      padding: 10px;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.8);
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-      nav {
-          flex-direction: column;
-      }
-      
-      .nav-links {
-          margin: 15px 0;
-      }
-      
-      .hero h2 {
-          font-size: 2rem;
-      }
-      
-      .hero h3 {
-          font-size: 1.5rem;
-      }
-      
-      .hero p {
-          font-size: 1rem;
-      }
-  }
-  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgb(31, 31, 35, 0.5);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 5vw;
+    margin-right: 0px;
+    margin-left: 4rem;
+}
+
+.logo-container h1 {
+    font-size: 1.5vw;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 3rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2vw;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff3300;
+}
+
+.social-icons {
+    display: flex;
+    margin-right: 4rem;
+}
+
+.social-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #666;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ff3300;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 50vw;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.hero-logo {
+    margin-right: 0rem;
+}
+
+.hero-logo img {
+    height: 13.5vw;
+    width: auto;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.2vw;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hero-motto p {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.logo-container h1,
+.hero h2 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+}
+
+
+/* Add a dark overlay to make text more readable */
+.hero {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url('img/main_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+
+/* Footer */
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin: 15px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
