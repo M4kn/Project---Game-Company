@@ -24,13 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // REMOVED: Parallax effect for hero section
-  // The background image will now stay fixed and not move with scrolling
-
-  // Fade in animation for hero and about-hero content
+  // Fade in animation for content on all pages
   const heroContent = document.querySelector(".hero-content");
   const heroMotto = document.querySelector(".hero-motto");
   const aboutContent = document.querySelector(".about-content");
+  const careersContent = document.querySelector(".careers-content");
+  const positionItems = document.querySelectorAll(".position-item");
 
   // Function to apply fade-in animation
   function applyFadeIn(element, delay) {
@@ -64,6 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
     applyFadeIn(aboutContent, 300);
   }
 
+  // Apply animations to careers/join page elements
+  if (careersContent) {
+    applyFadeIn(careersContent, 300);
+  }
+
+  // Apply staggered animations to position items on join page
+  positionItems.forEach((item, index) => {
+    item.style.opacity = "0";
+    item.style.transform = "translateX(-20px)";
+    item.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    item.style.transitionDelay = `${index * 0.05}s`;
+    
+    setTimeout(() => {
+      item.style.opacity = "1";
+      item.style.transform = "translateX(0)";
+    }, 500 + (index * 50));
+  });
+
   // Header transparency effect on scroll
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
@@ -91,6 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add fade-in animations for values and locations sections
   const valueItems = document.querySelectorAll(".value-item");
   const locationItems = document.querySelectorAll(".location-item");
+  const valuesTitle = document.querySelector(".values-title");
+  const locationsTitle = document.querySelector(".locations-title");
+  const contactTitle = document.querySelector(".contact-title");
 
   // Animate elements when they come into view
   function animateOnScroll() {
@@ -103,8 +123,18 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
+
+    // Observe section titles
+    [valuesTitle, locationsTitle, contactTitle].forEach(title => {
+      if (title) {
+        title.style.opacity = "0";
+        title.style.transform = "translateY(20px)";
+        title.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+        observer.observe(title);
+      }
+    });
 
     // Observe values
     valueItems.forEach((item, index) => {
@@ -131,6 +161,10 @@ document.addEventListener("DOMContentLoaded", function () {
     .fade-in {
       opacity: 1 !important;
       transform: translateY(0) scale(1) !important;
+    }
+    
+    .position-item:hover {
+      transform: translateX(5px) !important;
     }
   `;
   document.head.appendChild(style);
